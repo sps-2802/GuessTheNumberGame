@@ -16,7 +16,7 @@ function App() {
       ) : (
         <>
           <div className="header">
-            <label htmlFor="guess">Guess the Number (1 to 10)</label>
+            <label htmlFor="guess">Guess the Number</label>
           </div>
           <input
             id="guess"
