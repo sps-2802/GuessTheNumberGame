@@ -1,38 +1,99 @@
-.App {
+body {
+  background-color: #FFF5F0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: linear-gradient(135deg, #FFFDF8, #F7E7CE);
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  padding: 30px;
+  width: 400px;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #3D2C29;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #D4AF37; /* Imperial Gold */
+  border-radius: 12px;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fffdf8;
+  color: #3D2C29;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.04);
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:hover {
+  background-color: #F7E7CE;
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.3);
+  border-color: #B8860B; /* Dark goldenrod */
+}
+
+input:focus {
+  border-color: #B87333; /* Burnished Copper */
+  background-color: #FFF8EC;
+  box-shadow: 0 0 6px rgba(184, 115, 51, 0.4);
+}
+.footer{
+  margin-top: 30px;
+  font-style: italic;
+  color: #7A6C5D;
+}
+
+.start-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #D4AF37;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background-color: #B8860B;
+}
+
+.start-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.start-screen h1 {
+  font-size: 26px;
+  color: #A0522D;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-screen p {
+  font-size: 16px;
+  color: #5C3A21;
+  margin-bottom: 20px;
 }

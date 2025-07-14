@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { useState } from "react";
+import Result from "./components/gameResult";
+import StartGame from "./components/startGame";
+const secretNumber = Math.floor(Math.random() * 10) + 1;
 function App() {
+  const [guessNumber, setGuessNumber] = useState("");
+  const [gameStart, setgameStart] = useState(false);
+  const handleChange = (e) => {
+    setGuessNumber(e.target.value);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {!gameStart ? (
+        <StartGame onStart={() => setgameStart(true)} />
+      ) : (
+        <>
+          <div className="header">
+            <label htmlFor="guess">Guess the Number (1 to 10)</label>
+          </div>
+          <input
+            id="guess"
+            placeholder="Enter the number from 1 to 10"
+            type="number"
+            name="number"
+            onChange={handleChange}
+          />
+          <Result guessNumber={guessNumber} secretNumber={secretNumber} />
+          <div className="footer">© 2025 $P | All Rights Reserved</div>
+        </>
+      )}
     </div>
   );
 }
